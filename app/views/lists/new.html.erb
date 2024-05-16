@@ -6,5 +6,6 @@
   <%= f.submit %>
 <% end %>
 
-
-<%= link_to "Return home", lists_path %>
+<%= link_to lists_path do %>
+  <button type="button" class="btn btn-primary btn-sm my-3">Return Home</button>
+<% end %>

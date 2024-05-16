@@ -1,10 +1,19 @@
 <h1>Save any kind of movies</h1>
 <h2>Classic</h2>
-
+<div class="card">
+  <div class="card-body">
 <h3>My list</h3>
 <%# Movies list box %>
-<%= link_to "Create a movie List", new_list_path%>
-<% @lists.each do |list|%>
-  <%# Show will be here for all the movies %>
-  <%= link_to list.name, list_path(list)%>
+
+<ul class="list-group ">
+  <% @lists.each do |list|%>
+    <%# Show will be here for all the movies %>
+    <li class="list-group-item w-30"><%= link_to list.name, list_path(list)%></li>
+  <% end %>
+</ul>
+
+<%= link_to new_list_path do %>
+  <button type="button" class="btn btn-primary btn-sm my-3">Create a movie List</button>
 <% end %>
+</div>
+</div>
