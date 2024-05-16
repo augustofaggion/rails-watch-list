@@ -1,0 +1,14 @@
+<h1>Movies List </h1>
+
+<% @list.movies.each do |movie| %>
+  <p><%= movie.title %></p>
+<% end %>
+
+<%= link_to "Return home", lists_path %>
+
+
+<%= simple_form_for([@list, @bookmark]) do |f| %>
+  <%= f.input :comment %>
+  <%= f.input :movie, collection: Movie.all%>
+  <%= f.submit %>
+<% end %>
