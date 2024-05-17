@@ -7,7 +7,7 @@
   <% @lists.each do |list| %>
     <div class="col">
       <div class="card">
-        <%= image_tag("movie_list.jpg") %>
+        <%= cl_image_tag("oirpb1swylsjvtpbkdbv", width: 400, height: 300, crop: :fill) %>
         <div class="card-body bg-secondary bg-gradient bg-opacity-25">
           <p class="card-text">
             <%= link_to list_path(list)  do%>
